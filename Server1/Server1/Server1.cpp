@@ -45,7 +45,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	sockaddr_in service;
 	service.sin_family = AF_INET;
 	service.sin_addr.s_addr= inet_addr("127.0.0.1");
-	service.sin_port = htons(27015);
+	service.sin_port = htons(12345);
 
 
 	int bres =bind(socketServer, (const sockaddr *)(&service),sizeof(service));
@@ -84,6 +84,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		return 0;
 	}
 
+	printf("客户端上线");
+
+	//通知客户端
+	send(client, "我是服务器，我知道你上线了", sizeof("我是服务器，我知道你上线了"), 0);
+
 
 	//recv  获取系统协议缓冲区中的内容
 	char buf[1024] = { 0 };
@@ -104,8 +109,23 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	else
 	{
-		printf("收到内容：%s ===长度 %d", buf, rres);
+		printf("收到内容：%s ===长度 %d\n", buf, rres);
+		
 	}
+	//sned
+	//向client客户端发送消息
+	TCHAR sendbuf[1024] = { 0 };
+	sprintf(sendbuf, "服务端收到消息: %s", buf);
+	if (SOCKET_ERROR == send(client, sendbuf, strlen(sendbuf), 0))
+	{
+
+		//发送出错
+		return 0;
+	}
+
+
+
+	//清理工作
 	closesocket(client);
 	closesocket(socketServer);
 	WSACleanup();
