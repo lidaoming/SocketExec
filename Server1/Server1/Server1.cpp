@@ -1,6 +1,7 @@
 // Server1.cpp : 定义控制台应用程序的入口点。
 //
 
+#include<stdio.h>
 #include "stdafx.h"
 //引入网络头文件
 
@@ -84,45 +85,51 @@ int _tmain(int argc, _TCHAR* argv[])
 		return 0;
 	}
 
-	printf("客户端上线");
+	printf("客户端上线\n");
 
 	//通知客户端
-	send(client, "我是服务器，我知道你上线了", sizeof("我是服务器，我知道你上线了"), 0);
+	send(client, "我是服务器，我知道你上线了\n", sizeof("我是服务器，我知道你上线了\n"), 0);
 
 
-	//recv  获取系统协议缓冲区中的内容
-	char buf[1024] = { 0 };
-	int rres=recv(client, buf, 1023, 0);
-	//rres =0 客户端下线
-	if (rres==0)
+	while (1)
 	{
-		//客户端下线 连接中断
-		closesocket(client);
-		return 0;
-	}
-	else if (rres == SOCKET_ERROR)
-	{
-		//出错
-		closesocket(client);
-		return 0;
+		//recv  获取系统协议缓冲区中的内容
+		char buf[1024] = { 0 };
+		int rres = recv(client, buf, 1023, 0);
+		//rres =0 客户端下线
+		if (rres == 0)
+		{
+			//客户端下线 连接中断
+			closesocket(client);
+			return 0;
+		}
+		else if (rres == SOCKET_ERROR)
+		{
+			//出错
+			closesocket(client);
+			return 0;
+
+		}
+		else
+		{
+			printf("服务器收到内容：%s ===长度 %d\n", buf, rres);
+
+		}
+		//sned
+		//向client客户端发送消息
+		TCHAR sendbuf[1024] = { 0 };
+		scanf("%s", sendbuf);
+		//sprintf(sendbuf, "服务端收到消息: %s", buf);
+		if (SOCKET_ERROR == send(client, sendbuf, strlen(sendbuf), 0))
+		{
+
+			//发送出错
+			return 0;
+		}
+
 
 	}
-	else
-	{
-		printf("收到内容：%s ===长度 %d\n", buf, rres);
-		
-	}
-	//sned
-	//向client客户端发送消息
-	TCHAR sendbuf[1024] = { 0 };
-	sprintf(sendbuf, "服务端收到消息: %s", buf);
-	if (SOCKET_ERROR == send(client, sendbuf, strlen(sendbuf), 0))
-	{
-
-		//发送出错
-		return 0;
-	}
-
+	
 
 
 	//清理工作

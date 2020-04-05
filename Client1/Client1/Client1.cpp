@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include <stdio.h>
 #include <WinSock2.h>
 #pragma comment(lib,"Ws2_32.lib")
 
@@ -57,14 +58,28 @@ int _tmain(int argc, _TCHAR* argv[])
 	char buf1[1024] = { 0 };
 	int lres=recv(socketServer, buf1, 1023, 0);
 
-	printf("客户端收到: %s", buf1);
-	//发送消息
-	if (SOCKET_ERROR == send(socketServer, "我是客户端", strlen("我是客户端"), 0))
-	{
+	printf("客户端收到: %s\n", buf1);
 
-		//发送出错
-		return 0;
+	while (1)
+	{
+		char sendbuf[1024] = { 0 };
+		char recvbuf[1024] = { 0 };
+		//发送消息
+		scanf("%s", sendbuf);
+		if (SOCKET_ERROR == send(socketServer, sendbuf, strlen(sendbuf), 0))
+		{
+
+			//发送出错
+			return 0;
+		}
+
+		recv(socketServer, recvbuf, 1023, 0);
+		printf("客户端收到: %s\n", recvbuf);
+
+
+
 	}
+
 
 
 
