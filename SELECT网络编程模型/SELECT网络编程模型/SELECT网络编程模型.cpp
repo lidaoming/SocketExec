@@ -90,21 +90,64 @@ int _tmain(int argc, _TCHAR* argv[])
 		//创建临时填入的数组 select函数会将其改变
 		fd_set tmpallSockets = allSockets;
 		//不停的select 
-		int nres= select(0, &allSockets, &allSockets, NULL, &timeout);
+		//MessageBox(0, L"select", 0, 0);
+		int nres = select(0, &tmpallSockets, NULL, NULL, &timeout);
 
 		if (nres == 0)
 		{
 			//代表没有事件发生
 			continue;
 		}
+
+
 		else if (nres > 0)
 		{
 			//有事件发生，处理自定义代码
+			//遍历
+			for (size_t i = 0; i < tmpallSockets.fd_count; i++)
+			{
+				if (tmpallSockets.fd_array[i] == socketServer)
+				{
+					SOCKET clientSocket = accept(socketServer, NULL, NULL);
+					if (clientSocket == INVALID_SOCKET)
+					{
+						//出错
+						continue;
+					}
+					FD_SET(clientSocket, &allSockets);
+					printf("有新的客户端上线\n");
+				}
+				//客户端套接字
+				else
+				{
+					char bufstr[1024] = { 0 };
+					
+					int nrecv = recv(tmpallSockets.fd_array[i], bufstr, sizeof(bufstr), 0);
+					if (nrecv > 0)
+					{
+						printf("CLIENT===>Server :%s\n", bufstr);
+					}
+					else if (nrecv == 0)
+					{
+						//客户端下线
+						SOCKET deltmpSocket = tmpallSockets.fd_array[i];
+						FD_CLR(tmpallSockets.fd_array[i], &allSockets);
+						closesocket(deltmpSocket);
+					}
+					else if (nrecv == SOCKET_ERROR)
+					{
+						//接受出错
+						continue;
+					}
+				}
+			}
+			
 
 		}
 		else
 		{
 			//发生错误
+			;
 		}
 	}
 

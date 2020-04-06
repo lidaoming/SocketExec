@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SELECT网络编程模型", "SELECT网络编程模型\SELECT网络编程模型.vcxproj", "{C58BABAD-E446-4CD7-976D-D5B1A00ADB4D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SelectClient", "SelectClient\SelectClient.vcxproj", "{5CA28F8D-563C-4F00-BB9F-5F5701BC6E00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{C58BABAD-E446-4CD7-976D-D5B1A00ADB4D}.Debug|Win32.Build.0 = Debug|Win32
 		{C58BABAD-E446-4CD7-976D-D5B1A00ADB4D}.Release|Win32.ActiveCfg = Release|Win32
 		{C58BABAD-E446-4CD7-976D-D5B1A00ADB4D}.Release|Win32.Build.0 = Release|Win32
+		{5CA28F8D-563C-4F00-BB9F-5F5701BC6E00}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5CA28F8D-563C-4F00-BB9F-5F5701BC6E00}.Debug|Win32.Build.0 = Debug|Win32
+		{5CA28F8D-563C-4F00-BB9F-5F5701BC6E00}.Release|Win32.ActiveCfg = Release|Win32
+		{5CA28F8D-563C-4F00-BB9F-5F5701BC6E00}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
