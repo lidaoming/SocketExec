@@ -1,18 +1,18 @@
-﻿生成启动时间为 2020/4/5 21:28:14。
-     1>项目“D:\Ccode\SocketExec\Client1\Client1\Client1.vcxproj”在节点 2 上(Rebuild 个目标)。
+﻿生成启动时间为 2020/4/21 1:16:26。
+     1>项目“E:\C++\网络编程\Client1\Client1\Client1.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
-         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Client1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Client1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
-         D:\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Client1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Client1.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Client1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Client1.cpp
          Client1.cpp
-     1>d:\ccode\socketexec\client1\client1\client1.cpp(68): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\vs2013\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>e:\c++\网络编程\client1\client1\client1.cpp(65): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : 参见“scanf”的声明
        Link:
-         D:\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Ccode\SocketExec\Client1\Debug\Client1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Ccode\SocketExec\Client1\Debug\Client1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Ccode\SocketExec\Client1\Debug\Client1.lib" /MACHINE:X86 Debug\Client1.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\C++\网络编程\Client1\Debug\Client1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\C++\网络编程\Client1\Debug\Client1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\C++\网络编程\Client1\Debug\Client1.lib" /MACHINE:X86 Debug\Client1.obj
          Debug\stdafx.obj
-         Client1.vcxproj -> D:\Ccode\SocketExec\Client1\Debug\Client1.exe
-     1>已完成生成项目“D:\Ccode\SocketExec\Client1\Client1\Client1.vcxproj”(Rebuild 个目标)的操作。
+         Client1.vcxproj -> E:\C++\网络编程\Client1\Debug\Client1.exe
+     1>已完成生成项目“E:\C++\网络编程\Client1\Client1\Client1.vcxproj”(Rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.11
+已用时间 00:00:00.65
