@@ -23,15 +23,15 @@ int PostAccept();
 
 int PostRecv(int index);
 
-<<<<<<< HEAD
+
 int PostSend(int index);
 void Clear();
 
 
-=======
+
 
 void Clear();
->>>>>>> 606c7827349418fba2a6d12be002c8fc31d16445
+
 
 
 
@@ -116,13 +116,13 @@ int _tmain(int argc, _TCHAR* argv[])
 					closesocket(g_allSock[i]);
 					WSACloseEvent(g_allOlp[i].hEvent);
 					//从数组中删掉
-<<<<<<< HEAD
+
 					g_allSock[i] = g_allSock[g_count];
 					g_allOlp[i] = g_allOlp[g_count];
-=======
-					g_allSock[i] = g_allSock[g_count - 1];
-					g_allOlp[i] = g_allOlp[g_count - 1];
->>>>>>> 606c7827349418fba2a6d12be002c8fc31d16445
+
+					//g_allSock[i] = g_allSock[g_count - 1];
+					//g_allOlp[i] = g_allOlp[g_count - 1];
+
 					//循环控制变量-1
 					i--;
 					//个数减-1
@@ -135,11 +135,10 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				printf("accept\n");
 				//接受链接完成 i=0  serversocket=allsocket[0(就是i)]
-<<<<<<< HEAD
+
 				//给客户端发送
 				PostSend(g_count);
-=======
->>>>>>> 606c7827349418fba2a6d12be002c8fc31d16445
+
 				//投递accept
 				PostRecv(g_count);
 				//根据情况投递send
@@ -158,13 +157,13 @@ int _tmain(int argc, _TCHAR* argv[])
 				closesocket(g_allSock[i]);
 				WSACloseEvent(g_allOlp[i].hEvent);
 				//从数组中删掉
-<<<<<<< HEAD
+
 				g_allSock[i] = g_allSock[g_count];
 				g_allOlp[i] = g_allOlp[g_count];
-=======
+
 				g_allSock[i] = g_allSock[g_count - 1];
 				g_allOlp[i] = g_allOlp[g_count - 1];
->>>>>>> 606c7827349418fba2a6d12be002c8fc31d16445
+
 				//循环控制变量-1
 				i--;
 				//个数减-1
@@ -281,7 +280,7 @@ void Clear()
 		closesocket(g_allSock[i]);
 		WSACloseEvent(g_allOlp[i].hEvent);
 	}
-<<<<<<< HEAD
+
 }
 
 
@@ -318,6 +317,5 @@ int PostSend(int index)
 			return a;
 		}
 	}
-=======
->>>>>>> 606c7827349418fba2a6d12be002c8fc31d16445
+	
 }
