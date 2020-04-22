@@ -55,10 +55,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		return 0;
 	}
 
-	char buf1[1024] = { 0 };
-	int lres=recv(socketServer, buf1, 1023, 0);
 
-	printf("客户端收到: %s\n", buf1);
 
 	while (1)
 	{
@@ -73,8 +70,8 @@ int _tmain(int argc, _TCHAR* argv[])
 			return 0;
 		}
 
-		recv(socketServer, recvbuf, 1023, 0);
-		printf("客户端收到: %s\n", recvbuf);
+		//recv(socketServer, recvbuf, 1023, 0);
+		//printf("客户端收到: %s\n", recvbuf);
 
 
 
