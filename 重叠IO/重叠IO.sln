@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "重叠IO", "重叠IO\重叠IO.vcxproj", "{019A3C57-0A42-40A5-BAE0-68A5D93839BC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "完成例程", "完成例程\完成例程.vcxproj", "{D7B399B7-ADDD-44F2-AE72-A4CD6B95250A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{019A3C57-0A42-40A5-BAE0-68A5D93839BC}.Debug|Win32.Build.0 = Debug|Win32
 		{019A3C57-0A42-40A5-BAE0-68A5D93839BC}.Release|Win32.ActiveCfg = Release|Win32
 		{019A3C57-0A42-40A5-BAE0-68A5D93839BC}.Release|Win32.Build.0 = Release|Win32
+		{D7B399B7-ADDD-44F2-AE72-A4CD6B95250A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D7B399B7-ADDD-44F2-AE72-A4CD6B95250A}.Debug|Win32.Build.0 = Debug|Win32
+		{D7B399B7-ADDD-44F2-AE72-A4CD6B95250A}.Release|Win32.ActiveCfg = Release|Win32
+		{D7B399B7-ADDD-44F2-AE72-A4CD6B95250A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
