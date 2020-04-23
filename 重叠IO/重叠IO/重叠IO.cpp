@@ -161,8 +161,8 @@ int _tmain(int argc, _TCHAR* argv[])
 				g_allSock[i] = g_allSock[g_count];
 				g_allOlp[i] = g_allOlp[g_count];
 
-				g_allSock[i] = g_allSock[g_count - 1];
-				g_allOlp[i] = g_allOlp[g_count - 1];
+				//g_allSock[i] = g_allSock[g_count - 1];
+				//g_allOlp[i] = g_allOlp[g_count - 1];
 
 				//循环控制变量-1
 				i--;
